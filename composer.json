@@ -1,0 +1,43 @@
+{
+    "name": "cantonbolo/laravel-tushare",
+    "description": "Tushare PHP SDK for Laravel",
+    "type": "library",
+    "require": {
+        "php": "^7.2",
+        "cantonbolo/php-tushare": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "illuminate/support": "^5.7",
+        "orchestra/testbench": "^3.8",
+        "phpunit/phpunit": "^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CantonBolo",
+            "email": "cantonbolo@gmail.com"
+        }
+    ],
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Tushare\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tushare\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tushare\\TushareServiceProvider"
+            ]
+        }
+    }
+}

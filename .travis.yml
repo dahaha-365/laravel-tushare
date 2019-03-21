@@ -1,0 +1,25 @@
+language: php
+
+cache:
+  directories:
+    - cache
+
+php:
+  - 7.2
+  - 7.3
+
+env:
+  global:
+    - setup=stable
+    - laravel=5.x
+    - testbench=3.x
+
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction --prefer-source --dev
+
+script:
+  phpunit -c phpunit.xml --coverage-clover=coverage.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
