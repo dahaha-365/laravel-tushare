@@ -7,21 +7,14 @@ namespace Tushare\Tests;
 /**
  * Class PackageTest.
  *
- * @covers \Tushare\TushareServiceProvider Tushare
+ * @covers \Tushare\TushareServiceProvider
  */
 class PackageTest extends TestCase
 {
-    public function testTushareCanWork(): void
-    {
-        $this->assertIsArray(\Tushare::init('')->exec('')->result);
-    }
 
     public function testAppCanWork(): void
     {
-        $testbench = new class() extends \Orchestra\Testbench\TestCase {
-            //
-        };
-        $app = $testbench->createApplication();
-        $app->getProviders('tushare');
+        $exec = app('tushare')->exec('');
+        $this->assertInstanceOf(\Tushare::class, $exec);
     }
 }
