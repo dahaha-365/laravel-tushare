@@ -11,7 +11,6 @@ namespace Tushare\Tests;
  */
 class PackageTest extends TestCase
 {
-
     public function testAppCanWork(): void
     {
         $exec = app('tushare')->exec('');
