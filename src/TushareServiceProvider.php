@@ -1,4 +1,5 @@
 <?php
+
 namespace Tushare;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
@@ -11,7 +12,7 @@ class TushareServiceProvider extends \Illuminate\Support\ServiceProvider impleme
     {
         $this->publishes(
             [
-                __DIR__.DIRECTORY_SEPARATOR.'config.php' => config_path('tushare.php')
+                __DIR__.DIRECTORY_SEPARATOR.'config.php' => config_path('tushare.php'),
             ],
             'laravel-tushare'
         );
