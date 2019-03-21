@@ -1,10 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Tushare\Tests;
 
 /**
- * Class PackageTest
+ * Class PackageTest.
  *
  * @covers \Tushare\TushareServiceProvider Tushare
  */

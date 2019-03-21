@@ -1,12 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Tushare\Tests;
 
 /**
- * Class TestCase
- *
- * @package Tushare\Tests
+ * Class TestCase.
  */
 class TestCase extends \Orchestra\Testbench\TestCase
 {
